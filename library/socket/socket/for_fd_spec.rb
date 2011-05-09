@@ -18,7 +18,6 @@ describe "Socket.for_fd given a file descriptor" do
 
       # state explicitly that we are done sending
       new_sock.shutdown
-      client.shutdown
 
       host = server.accept
       host.read(3).should == "foo"
